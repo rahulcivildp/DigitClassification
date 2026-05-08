@@ -1,4 +1,2 @@
 ﻿matplotlib
 scikit-learn
-numpy
-statsmodels
