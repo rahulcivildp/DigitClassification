@@ -1,30 +1,82 @@
-* Download Miniconda from [https://www.anaconda.com/download/success](https://www.anaconda.com/docs/getting-started/main)
+# Digit Classification Setup Guide
 
-* Install conda acording to the system os.
+## Prerequisites
 
-* Then run:
+Download Miniconda from:
+
+[https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
+
+Install Conda according to your operating system.
+
+Verify the installation:
+
+```bash
 conda --version
+```
 
-* Search in Windows start menu:
-Anaconda Prompt
+---
 
-* Inside Anaconda Prompt, run:
+## Open Anaconda Prompt
+
+Search for **Anaconda Prompt** in the Windows Start Menu and open it.
+
+Initialize Conda for PowerShell:
+
+```bash
 conda init powershell
+```
 
-* Open VS Code, new terminal:
-conda activate
+---
+
+## Create Conda Environment
+
+Open VS Code and create a new terminal.
+
+Create a new Conda environment:
+
+```bash
 conda create -n digit python=3.14
+```
+
+Activate the environment:
+
+```bash
 conda activate digit
+```
 
-* Create requirements.txt to include missing packages
+---
+
+## Create `requirements.txt`
+
+Create the requirements file:
+
+```bash
 nano requirements.txt
+```
 
-* Then type: 
+Add the following packages inside `requirements.txt`:
+
+```txt
 matplotlib
 scikit-learn
+```
 
-* Install all packages in requirements.txt
+---
+
+## Install Required Packages
+
+Run:
+
+```bash
 pip install -r requirements.txt
+```
 
-* Run:
+---
+
+## Run the Project
+
+Execute the script:
+
+```bash
 python plot_digits_classification.py
+```
